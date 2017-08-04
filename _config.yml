@@ -1,0 +1,43 @@
+# Meta
+title: 공동체IT사회적협동조합
+description: 시민사회단체와 공익IT활동가가 함께 만드는 기술공동체
+desc: |
+  시민사회단체와 공익IT활동가가 함께 만드는 기술공동체를 목적으로
+  2017년 7월 설립한 비영리 조합법인입니다.
+
+address: 서울특별시 은평구 통일로 684 서북50플러스캠퍼스 3층 스페이스힘나 (우) 03371
+location: http://naver.me/5j3lxIaD
+
+url:
+baseurl: ''
+timezone: 'Asia/Seoul'
+permalink: pretty
+
+# Build
+exclude:
+  - .jekyll-metadata
+  - .gitignore
+  - .ruby-version
+  - README.md
+  - LICENSE
+  - serve.sh
+  - debug.html
+
+sass:
+  style: :compressed
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  entity_output: :as_input
+  hard_wrap: false
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# SEO
+facebook:
+  app_id:
+  publisher:
+logo:
+
+google_site_verification:
+google_analytics:
