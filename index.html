@@ -3,8 +3,6 @@ layout: page
 
 ---
 
-<p>&nbsp;</p>
-
 {% for message in site.data.front-messages %}
   {% include front-jumbotron.html title=message.title desc=message.description type=message.type icon=message.icon btn-url=message.btn-url btn-text=message.btn-text %}
 {% endfor %}
