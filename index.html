@@ -5,8 +5,6 @@ layout: page
 
 <p>&nbsp;</p>
 
-{% include front-jumbotron.html title=site.title desc=site.desc icon="flag" %}
-
-{% include front-jumbotron.html title="컴퓨터와 홈페이지를 고쳐요!" desc="...가 전부는 아니고요. " class="text-right" icon="heart" %}
-
-{% include front-jumbotron.html title="연구하고 개발하고 공유해요!" desc="...가 전부일지도..." icon="diamond" %}
+{% for message in site.data.front-messages %}
+  {% include front-jumbotron.html title=message.title desc=message.description type=message.type icon=message.icon btn-url=message.btn-url btn-text=message.btn-text %}
+{% endfor %}
