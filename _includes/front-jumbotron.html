@@ -4,7 +4,7 @@
 {% assign class = 'basic' %}
 {% if include.type == 'right' %}{% assign class = 'text-right' %}{% endif %}
 
-<div class="jumbotron {{ class }}" style="margin-bottom: 0; border-bottom: 1px solid #fff;">
+<div class="jumbotron {{ class }} mb-1" style="border-bottom: 1px solid #fff;">
   <div class="container">
     {% if include.title %}<h1>{{ include.title }}{% if include.icon %}&nbsp; <i class="fa fa-{{ include.icon }}"></i>{% endif %}</h1>{% endif %}
     {% if include.desc %}<p>{{ include.desc | newline_to_br }}</p>{% endif %}

@@ -14,7 +14,7 @@
     ...가 전부는 아니고요. 제일 쉽게 설명하면 대략 이런 식이라는...
   btn-url: /what-we-do/
   btn-text: 
-  icon: heart
+  icon: wrench
   type: right
 
 - title: 연구하고 개발하고 공유해요!
@@ -38,5 +38,5 @@
     함께 해요! 같이 하면 더 재밌을거에요 ㅎㅎ
   btn-url: /together/develop/
   btn-text: 
-  icon: smile-p
+  icon: heart
   type: basic

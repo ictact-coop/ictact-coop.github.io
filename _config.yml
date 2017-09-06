@@ -5,7 +5,7 @@ desc: |
   시민사회단체와 공익IT활동가가 함께 만드는 기술공동체를 목적으로
   2017년 7월 설립한 비영리 조합법인입니다.
 
-address: 서울특별시 은평구 통일로 684 서북50플러스캠퍼스 3층 스페이스힘나 (우) 03371
+address: 서울특별시 은평구 통일로 684 서북50플러스캠퍼스 3층 (우) 03371
 location: http://naver.me/5j3lxIaD
 
 url:
@@ -41,3 +41,16 @@ logo:
 
 google_site_verification:
 google_analytics:
+
+# collections
+collections:
+  meetups:
+    output: true
+    permalink: /meetup/:path/
+
+defaults:
+  -
+    scope:
+      path: _meetups
+    values:
+      layout: meetup
