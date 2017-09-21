@@ -9,11 +9,11 @@ title: 모임
       <div class="card col-md-4 my-3 py-3">
         <a href="{{ meetup.url }}"><img class="card-img-top" src="{{ meetup.cover }}" alt="{{ meetup.title }}"></a>
           <div class="card-block">
-            <h4 class="card-title"><a href="{{ meetup.url }}">{{ meetup.title }}</a></h4>
+            <h4 class="card-title{% if meetup.status %} {{ meetup.status }}{% endif %}"><a href="{{ meetup.url }}">{{ meetup.title }}{% if meetup.status == 'canceled' %} (취소됨){% endif %}</a></h4>
             <p class="card-text">{{ meetup.description }}</p>
             <ul class="list-unstyled">
-              <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ meetup.when }}</li>
-              <li><a href="{{ meetup.where-url }}" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ meetup.where }}</a></li>
+              <li class="when{% if meetup.status %} {{ meetup.status }}{% endif %}"><i class="fa fa-calendar" aria-hidden="true"></i> {{ meetup.when }}</li>
+              <li class="where{% if meetup.status %} {{ meetup.status }}{% endif %}"><a href="{{ meetup.where-url }}" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ meetup.where }}</a></li>
               <li><i class="fa fa-trophy" aria-hidden="true"></i> {{ meetup.why }}</li>
             </ul>
             <a href="{{ meetup.url }}" class="btn btn-primary">자세히</a>

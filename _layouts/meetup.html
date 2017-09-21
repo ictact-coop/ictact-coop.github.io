@@ -10,8 +10,8 @@ layout: default
   {% if page.cover %}<p class="my-3"><img src="{{ page.cover }}" alt="{{ page.title }}"></p>{% endif %}
 
   <ul class="list-unstyled lead">
-    <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ page.when }}</li>
-    <li><a href="{{ page.where-url }}" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ page.where }}</a></li>
+    <li><i class="fa fa-calendar" aria-hidden="true"></i> <span class="when{% if page.status %} {{ page.status }}{% endif %}">{{ page.when }}</span></li>
+    <li><a href="{{ page.where-url }}" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> <span class="where{% if page.status %} {{ page.status }}{% endif %}">{{ page.where }}</span></a></li>
     <li><i class="fa fa-trophy" aria-hidden="true"></i> {{ page.why }}</li>
   </ul>
 
@@ -19,7 +19,7 @@ layout: default
 
   {{ content }}
 
-  {% if page.join %}<p>&nbsp;</p><a href="{{ page.join }}" class="btn btn-lg btn-primary" target="_blank"><i class="fa fa-thumbs-up" aria-hidden="true"></i> 나도~</a>{% endif %}
+  {% if page.join %}<p>&nbsp;</p><button class="btn btn-lg {% if page.status != 'canceled' %}btn-primary{% endif %}{% if page.status %} {{ page.status }}{% endif %}" {% if page.status != 'canceled' %}onclick="window.open('{{ page.join }}','_blank');"{% endif %} target="_blank" disabled><i class="fa fa-thumbs-up" aria-hidden="true"></i> 나도~</button>{% endif %}
 
   <p>&nbsp;</p>
 
