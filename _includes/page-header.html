@@ -3,6 +3,10 @@
     <div class="float-right">
     {% if page.date %}<span class="text-dark created"> {{ page.date | date: "%Y-%m-%d" }} </span><br />{% endif %}
     {% if page.author %}<span class="text-dark author"> {{ page.author }} </span>{% endif %}
+    {% if page.url == '/meetups/' %}
+	    <a target="_blank" href="{{ site.meetup_form_url }}" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> 일정 공유하기</a>&nbsp;
+	    <a target="_blank" href="{{ site.public_calendar }}" class="btn btn-primary"><i class="fa fa-calendar" aria-hidden="true"></i> 조합 달력</a>
+	{% endif %}
     </div>
     <h1 class="page-title{% if page.status %} {{ page.status }}{% endif %}">{{ page.title }}{% if page.status == 'canceled' %} (취소됨){% endif %}</h1>
     <p class="lead page-description">{{ page.description }}</p>

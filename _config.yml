@@ -8,6 +8,10 @@ desc: |
 address: 서울특별시 은평구 통일로 684 서북50플러스캠퍼스 3층 (우) 03371
 location: http://naver.me/5j3lxIaD
 
+meetup_form_url: https://goo.gl/forms/hptR4CeBjzgZ6Tm13
+public_calendar: https://goo.gl/7eseBH
+
+
 url:
 baseurl: ''
 timezone: 'Asia/Seoul'
