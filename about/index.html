@@ -2,3 +2,38 @@
 layout: page
 title: 우리 사협 소개
 ---
+
+
+{% capture intro-text %}
+> 공동체IT사회적협동조합은   
+> "기술공동체를 만들고 발전시킴으로써 사회의 IT문제를 해결해가는 사회적협동조합"입니다.
+{: .blockquote }
+
+시민사회단체와 공익IT활동가들이 서로 협력하여 IT역량을 지속, 발전시킬 수 있도록 합리적이고 믿을 수 있는 IT서비스를 제공함으로써   
+사회문제 해결을 위한 기술공동체를 만들어가는 것을 목적으로 하고 있습니다.
+
+공동체IT사회적협동조합은 IT를 통해 더 좋은 세상을 만들어가고자 하는 사람들의 생각과 노력을 모아 만들어 가는 기술공동체입니다.   
+세상을 변화시키려는 사회활동가에게 신뢰할 수 있는 IT서비스를 제공하고,   
+즐겁고 보람 있는 활동을 추구하는 공익IT활동가들이 마음놓고 활동할 수 있는 지속가능한 생태계를 만들어가고자 합니다.
+{% endcapture %}
+
+<div class="container">
+
+	<section class="introductions">
+		{{ intro-text | markdownify }}
+	</section>
+
+	<section class="actions">
+		<h2 class="py-3">기록</h2>
+		{% assign actions = site.data.actions | sort: 'date' | reverse %}
+		<ul class="list-unstyled">
+		{% for action in actions %}
+			<li class="action row py-2 bt-1">
+				<div class="col-sm-2">{{ action.date }}</div>
+				<div class="col-sm-6">{{ action.action }}</div>
+				<div class="col-sm-3">{{ action.persons }}</div>
+			</li>
+		{% endfor %}
+		</ul>
+	</section>
+</div>
